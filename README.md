@@ -11,3 +11,5 @@ Responsive landing page that supports russian and english languages.
 - Typescript
 - SASS
 - [countUp.js](https://github.com/inorganik/countUp.js) library :green_book:
+
+![Page showcase](https://github.com/crucials/telegads-page/blob/master/preview.png)
