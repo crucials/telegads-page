@@ -1,0 +1,135 @@
+@use '../colors' as *;
+
+.step {
+    padding: 75px 0;
+
+    .section-wrapper {
+        font-family: 'Helvetica Neue Cyr';
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        column-gap: 15px;
+        row-gap: 38px;
+    }
+
+    &:nth-of-type(even) {
+        background-color: #F6F6F6;
+    }
+}
+
+.step-info {
+    width: 35%;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    column-gap: 20px;
+
+    img {
+        width: 40px;
+        height: 50px;
+    }
+}
+
+.step-number {
+    color: white;
+    text-shadow:
+        -1px -1px 0 $mainColor,  
+        1px -1px 0 $mainColor,
+        -1px 1px 0 $mainColor,
+        1px 1px 0 $mainColor;
+
+    font-size: 5.8rem;
+
+    @supports (-webkit-text-stroke: $mainColor 1px) {
+        -webkit-text-stroke: $mainColor 1px;
+        color: transparent;
+        text-shadow: none;
+    }
+}
+
+.step-title {
+    width: 80%;
+    font-weight: 500;
+    font-size: 2.1rem;
+    line-height: 2.5rem;
+}
+
+.step-description {
+    width: 38%;
+    line-height: 1.6rem;
+    min-width: 300px;
+    
+    p {
+        color: #677488;
+        margin-bottom: 36px;
+    }
+}
+
+.register-button {
+    background-color: $mainColor;
+    padding: 14px 36px;
+    color: white;
+    font-weight: 500;
+    border-radius: 100px;
+    transition: background-color 0.3s, padding 0.3s;
+
+    &:hover {
+        background-color: lighten($mainColor, 4);
+    }
+
+    &:active {
+        padding: 14px 40px;
+    }
+}
+
+.payment-methods {
+    display: block;
+    color: black;
+    margin-bottom: 36px;
+}
+
+.payment-methods-links {
+    display: flex;
+    column-gap: 21px;
+    align-items: center;
+}
+
+@media (min-width: 1800px) {
+    .step-description {
+        font-size: 1.3rem;
+        line-height: 1.5rem;
+    }
+
+    .register-button {
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .step-info {
+        width: 40%;
+        min-width: 240px;
+    }
+
+    .step-description {
+        width: 30%;
+    }
+}
+
+@media (max-width: 650px) {
+    .step-info {
+        min-width: 200px;
+    }
+
+    .step-description {
+        min-width: 200px;
+    }
+}
+
+@media (max-width: 435px) {
+    .step-info, .step-description {
+        min-width: 0px;
+        width: 100%;
+    }
+}

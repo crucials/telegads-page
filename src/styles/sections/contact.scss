@@ -1,0 +1,129 @@
+@use '../colors' as *;
+
+.contact {
+    margin: 0 auto 150px auto;
+    width: 89%;
+    display: flex;
+    height: 600px;
+
+    div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 50%;
+        height: 100%;
+        row-gap: 30px;
+        flex-direction: column;
+        background-color: #EEF4FD;
+
+        &:first-child {
+            background-image: url('assets/images/contactbg.png');
+            background-size: 100% 100%;
+        }
+    }
+}
+
+.contact-heading {
+    font-family: 'Helvetica Neue Cyr';
+    font-size: 3rem;
+    text-align: center;
+    font-weight: 500;
+    color: white;
+}
+
+.contact-text {
+    font-family: 'Gotham Pro';
+    font-size: 1rem;
+    font-weight: normal;
+    color: white;
+    line-height: 1.3rem;
+    width: 60%;
+}
+
+.social-networks-list {
+    width: 65%;
+}
+
+.social-network {
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    column-gap: 70px;
+    width: 100%;
+    min-width: 350px;
+    margin-bottom: 18px;
+    border: 1px solid #A5A5A5;
+
+    &:last-child {
+        margin-bottom: 0px;
+    }
+
+    &:hover {
+        cursor: pointer;
+    }
+
+    p {
+        font-weight: bold;
+        font-size: 0.87rem;
+        font-family: 'Montserrat';
+    }
+
+    figure {
+        flex-shrink: 0;
+        width: 80px;
+        height: 80px;
+        background-color: $mainColor;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img {
+            width: 22px;
+            height: 22px;
+        }
+    }
+}
+
+@media (min-width: 1800px) {
+    .social-network {
+        column-gap: 130px;
+        
+        p {
+            font-size: 1.05rem;
+        }
+    }
+}
+
+@media (max-width: 1110px) {
+    .contact {
+        flex-direction: column;
+        align-items: center;
+
+        div {
+            width: 100%;
+        }
+    }
+
+    .contact-text {
+        text-align: center;
+    }
+
+    .social-network {
+        width: 50%;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 550px) {
+    .social-networks-list {
+        width: 80%;
+    }
+
+    .social-network {
+        justify-content: center;
+        column-gap: 10px;
+        width: 100%;
+        min-width: 0px;
+    }
+}

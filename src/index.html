@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="assets/images/favicon.ico" type="image/x-icon">
+
+    <title>TelegAds</title>
+</head>
+<body>
+    <a id="about"></a>
+    <header class="header">
+        <nav class="navigation">
+            <a href="#" class="telegads-logo">
+                <span class="logo-part-1">TELEG</span>
+                <span class="logo-part-2">ADS</span>
+            </a>
+
+            <select class="language-select">
+                <option value="ru">RU</option>
+                <option value="en">EN</option>
+            </select>
+
+            <ul class="nav-menu">
+                <li class="menu-item">
+                    <a href="#about" data-translatable="aboutUsLink">О нас</a>
+                </li>
+
+                <li class="menu-item">
+                    <a href="#advantages" data-translatable="advantagesLink">Преимущества</a>
+                </li>
+
+                <li class="menu-item">
+                    <a href="#services" data-translatable="servicesLink">Сервисы</a>
+                </li>
+
+                <li class="menu-item">
+                    <a href="#contacts" data-translatable="contactsLink">Контакты</a>
+                </li>
+
+                <li class="menu-indicator"></li>
+            </ul>
+
+            <button class="log-in-button">
+                <span data-translatable="logInButton">ВХОД / РЕГИСТРАЦИЯ</span>
+                <img src="assets/images/login.png" alt="Login icon">
+            </button>
+
+            <button class="open-menu-button">
+                <img src="assets/images/menu.svg" alt="Menu burger icon">
+            </button>
+
+            <div class="log-in-backdrop"></div>
+
+            <dialog class="log-in-window">
+                <button class="close-window-button">
+                    +
+                </button>
+
+                <form class="account-form log-in-form">
+                    <h2 data-translatable="logInFormHeading">
+                        Авторизация
+                    </h2>
+
+                    <div class="account-form-field">
+                        <label data-translatable="loginFieldLabel">
+                            Логин
+                        </label>
+
+                        <input type="text">
+                    </div>
+
+                    <div class="account-form-field password-field">
+                        <label data-translatable="passwordFieldLabel">
+                            Пароль
+                        </label>
+
+                        <input type="text">
+
+                        <img src="assets/images/question.svg" alt="Question icon"
+                            title="Пароль должен быть не менее 8 символов" data-translatable="title:questionIcon">
+                    </div>
+
+                    <button class="submit-button">
+                        <span data-translatable="submitButton">ДАЛЕЕ</span>
+
+                        <img src="assets/images/rightarrow.svg" alt="White right arrow icon">
+                    </button>
+
+                    <p class="switch-forms-link" id="toRegLink" data-translatable="toRegistrationLink">
+                        Регистрация
+                    </p>
+                </form>
+
+                <form class="account-form sign-up-form" hidden>
+                    <h2 data-translatable="signUpFormHeading">
+                        Регистрация
+                    </h2>
+
+                    <div class="account-form-field">
+                        <label data-translatable="loginFieldLabel">
+                            Логин
+                        </label>
+
+                        <input type="text">
+                    </div>
+
+                    <div class="account-form-field password-field">
+                        <label data-translatable="passwordFieldLabel">
+                            Пароль
+                        </label>
+
+                        <input type="text">
+
+                        <img src="assets/images/question.svg" alt="Question icon"
+                            title="Пароль должен быть не менее 8 символов" data-translatable="title:questionIcon">
+                    </div>
+
+                    <div class="account-form-field">
+                        <label data-translatable="repeatPasswordFieldLabel">
+                            Повторите пароль
+                        </label>
+
+                        <input type="text">
+                    </div>
+
+                    <button class="submit-button">
+                        <span data-translatable="submitButton">ДАЛЕЕ</span>
+
+                        <img src="assets/images/rightarrow.svg" alt="White right arrow icon">
+                    </button>
+
+                    <p class="switch-forms-link" id="toAuthLink" data-translatable="toAuthenticationLink">
+                        Авторизация
+                    </p>
+                </form>
+            </dialog>
+        </nav>
+
+        <aside class="mobile-menu">
+            <button class="close-menu-button">
+                +
+            </button>
+
+            <a href="" class="telegads-logo">
+                <span class="logo-part-1">TELEG</span>
+                <span class="logo-part-2">ADS</span>
+            </a>
+
+            <ul>
+                <li class="mobile-menu-item">
+                    <a href="" data-translatable="aboutUsLink">О нас</a>
+                </li>
+
+                <li class="mobile-menu-item">
+                    <a href="" data-translatable="advantagesLink">Преимущества</a>
+                </li>
+
+                <li class="mobile-menu-item">
+                    <a href="" data-translatable="servicesLink">Сервисы</a>
+                </li>
+
+                <li class="mobile-menu-item">
+                    <a href="" data-translatable="contactsLink">Контакты</a>
+                </li>
+
+                <li class="mobile-menu-indicator"></li>
+            </ul>
+
+            <select class="language-select">
+                <option value="ru">RU</option>
+                <option value="en">EN</option>
+            </select>
+
+            <button class="log-in-button">
+                <span data-translatable="logInButton">ВХОД / РЕГИСТРАЦИЯ</span>
+                <img src="assets/images/login.png" alt="Login icon">
+            </button>
+        </aside>
+
+        <section class="hero">
+            <div class="section-wrapper">
+                <h1 data-translatable="heroHeading">
+                    Эффективная реклама в Telegram
+                </h1>
+
+                <p class="hero-text" data-translatable="heroText">
+                    Мы помогаем найти целевую аудиторию в Telegram и запускать эффективные рекламные кампании
+                </p>
+
+                <a href="" class="start-button">
+                    <span data-translatable="startButton">
+                        НАЧАТЬ СЕЙЧАС
+                    </span>
+
+                    <figure>
+                        <img src="assets/images/rightarrow2.svg" alt="White right arrow icon">
+                    </figure>
+                </a>
+
+                <a id="advantages"></a>
+                <div class="statistics">
+                    <article class="statistic-card">
+                        <span class="quantity" id="newUsersQuantity">
+                            207 228
+                        </span>
+
+                        <p class="statistic-name" data-translatable="newUsersStatistic">
+                            новых пользователей на бирже
+                        </p>
+                    </article>
+
+                    <article class="statistic-card statistic-card-highlighted">
+                        <span class="quantity" id="channelsQuantity">
+                            7 754
+                        </span>
+
+                        <p class="statistic-name" data-translatable="checkedChannelsStatistic">
+                            каналов, проверенных вручную
+                        </p>
+                    </article>
+
+                    <article class="statistic-card">
+                        <span class="quantity" id="ordersQuantity">
+                            460 482
+                        </span>
+
+                        <p class="statistic-name" data-translatable="ordersStatistic">
+                            успешно реализованных заказов
+                        </p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="clients">
+            <div class="section-wrapper">
+                <h2 class="section-heading">
+                    <span data-translatable="clientsHeadingPart1">Нам</span>
+                    <br>
+                    <span data-translatable="clientsHeadingPart2">доверяют</span>
+                </h2>
+    
+                <ul class="clients-list">
+                    <li class="client">
+                        <a href="https:/google.com/" target="_blank" title="Google">
+                            <img src="assets/images/google.svg" alt="Google logo">
+                        </a>
+                    </li>
+
+                    <li class="client">
+                        <a href="https:/yandex.ru/" target="_blank" title="Yandex">
+                            <img src="assets/images/yandex.svg" alt="Yandex logo">
+                        </a>
+                    </li>
+
+                    <li class="client">
+                        <a href="https:/visa.com/" target="_blank" title="Visa">
+                            <img src="assets/images/visa.svg" alt="Visa logo">
+                        </a>
+                    </li>
+
+                    <li class="client">
+                        <a href="https:/mastercard.com/" target="_blank" title="Mastercard">
+                            <img src="assets/images/mastercard.svg" alt="Mastercard logo">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </header>
+
+    <main>
+        <section class="start-steps">
+            <section class="step">
+                <div class="section-wrapper">
+                    <div class="step-info">
+                        <span class="step-number">
+                            01
+                        </span>
+
+                        <img src="assets/images/user.svg" alt="User icon">
+
+                        <h3 class="step-title" data-translatable="registerStepTitle">
+                            Регистрируйте аккаунт
+                        </h3>
+                    </div>
+
+                    <div class="step-description">
+                        <p data-translatable="registerStepDescription">
+                            Пройдите быструю регистрацию чтобы активировать аккаунт.
+                        </p>
+
+                        <button class="register-button" data-translatable="registerButton">
+                            РЕГИСТРАЦИЯ
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <section class="step">
+                <div class="section-wrapper">
+                    <div class="step-description">
+                        <p data-translatable="channelsStepDescription">
+                            Выберите подходящие каналы в каталоге.
+                        </p>
+                    </div>
+
+                    <div class="step-info">
+                        <span class="step-number">
+                            02
+                        </span>
+
+                        <img src="assets/images/channels.svg" alt="Channels icon">
+
+                        <h3 class="step-title" data-translatable="channelsStepTitle">
+                            Каталог каналов
+                        </h3>
+                    </div>
+                </div>
+            </section>
+
+            <section class="step">
+                <div class="section-wrapper">
+                    <div class="step-info">
+                        <span class="step-number">
+                            03
+                        </span>
+
+                        <img src="assets/images/card.svg" alt="Card icon">
+
+                        <h3 class="step-title" data-translatable="paymentStepTitle">
+                            Пополните баланс
+                        </h3>
+                    </div>
+
+                    <div class="step-description">
+                        <p data-translatable="paymentStepDescription">
+                            Пополните баланс удобным способом:
+                        </p>
+
+                        <span class="payment-methods">
+                            Visa/Mastercard/МИР, Qiwi <br> Банковский перевод
+                        </span>
+
+                        <ul class="payment-methods-links">
+                            <li>
+                                <a href="https:/visa.com/" title="Visa" target="_blank">
+                                    <img src="assets/images/visa2.svg" alt="Visa logo">
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="https:/mastercard.com/" title="Mastercard" target="_blank">
+                                    <img src="assets/images/mastercard2.svg" alt="Mastercard logo">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </section>
+
+        <a id="services"></a>
+        <section class="services">
+            <h2 class="section-heading">
+                <span data-translatable="servicesHeadingPart1">Начните работать</span>
+                <br>
+                <span data-translatable="servicesHeadingPart2">с нами</span>
+            </h2>
+
+            <ul class="services-list">
+                <li class="service-circle">
+                    <h3 data-translatable="advertServiceHeading">
+                        Рекламодателям
+                    </h3>
+
+                    <hr>
+
+                    <p>
+                        <span data-translatable="advertServiceDescriptionPart1">Продвигайте</span>
+                        <span data-translatable="advertServiceDescriptionPart2">свой бизнес с</span>
+                        <span data-translatable="advertServiceDescriptionPart3">помощью эффективной</span>
+                        <span data-translatable="advertServiceDescriptionPart4">рекламы в Telegram</span>
+                    </p>
+                </li>
+
+                <li class="service-circle">
+                    <h3 data-translatable="adminServiceHeading">
+                        Администраторам
+                    </h3>
+
+                    <hr>
+
+                    <p>
+                        <span data-translatable="adminServiceDescriptionPart1">Зарабатывайте</span>
+                        <span data-translatable="adminServiceDescriptionPart2">деньги на раз</span>
+                        <span data-translatable="adminServiceDescriptionPart3">мещении рекламы</span>
+                        <span data-translatable="adminServiceDescriptionPart4">в своих каналах</span>
+                        <span data-translatable="adminServiceDescriptionPart5">и группах</span>
+                    </p>
+                </li>
+
+                <li class="service-circle">
+                    <h3 data-translatable="channelServiceHeading">
+                        Агенствам
+                    </h3>
+
+                    <hr>
+
+                    <p>
+                        <span data-translatable="channelServiceDescriptionPart1">Telegram -</span>
+                        <span data-translatable="channelServiceDescriptionPart2">новый маркетинговый</span>
+                        <span data-translatable="channelServiceDescriptionPart3">канал для</span>
+                        <span data-translatable="channelServiceDescriptionPart4">ваших клиентов</span>
+                    </p>
+                </li>
+            </ul>
+        </section>
+
+        <section class="registration">
+            <h2 class="registration-heading" data-translatable="registrationHeading">
+                Регистрация
+            </h2>
+
+            <div class="registration-description">
+                <p data-translatable="registrationDescription">
+                    Создайте аккаунт через Telegram всего за пару кликов
+                </p>
+
+                <button data-translatable="createButton">
+                    СОЗДАТЬ АККАУНТ
+                </button>
+            </div>
+        </section>
+
+        <a id="contacts"></a>
+        <section class="contact">
+            <div>
+                <h2 class="contact-heading" data-translatable="contactHeading">
+                    Возникли вопросы?
+                </h2>
+
+                <p class="contact-text" data-translatable="contactText">
+                    Напишите нам и мы ответим Вам в ближайшее время
+                </p>
+            </div>
+
+            <div>
+                <ul class="social-networks-list">
+                    <li class="social-network">
+                        <p data-translatable="vkContact">
+                            НАПИСАТЬ В ВКОНТАКТЕ
+                        </p>
+
+                        <figure title="Vkontakte">
+                            <img src="assets/images/vk.svg" alt="Vkontakte icon">
+                        </figure>
+                    </li>
+
+                    <li class="social-network">
+                        <p data-translatable="facebookContact">
+                            НАПИСАТЬ В FACEBOOK
+                        </p>
+
+                        <figure title="Facebook">
+                            <img src="assets/images/facebook.svg" alt="Facebook icon">
+                        </figure>
+                    </li>
+
+                    <li class="social-network">
+                        <p data-translatable="telegramContact">
+                            НАПИСАТЬ В TELEGRAM
+                        </p>
+
+                        <figure title="Facebook">
+                            <img src="assets/images/telegram.svg" alt="Telegram icon">
+                        </figure>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <footer>
+            <div class="links">
+                <nav class="nav-links">
+                    <h3 class="footer-heading" data-translatable="navLinksHeading">
+                        Навигация
+                    </h3>
+
+                    <ul class="nav-links-list">
+                        <li>
+                            <a href="" data-translatable="catalogLink">
+                                Каталог каналов
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="" data-translatable="forAdvertisersLink">
+                                Рекламодателям
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="" data-translatable="forAdminsLink">
+                                Администраторам
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="" data-translatable="forAgenciesLink">
+                                Агентствам
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="" data-translatable="referralProgramLink">
+                                Реферальная программа
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="" data-translatable="articlesLink">
+                                Статьи
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+
+                <address>
+                    <h3 class="footer-heading" data-translatable="emailHeading">
+                        Связь с нами
+                    </h3>
+
+                    <a href="mailto:support@adgram.io" class="email-link">
+                        support@adgram.io
+                    </a>
+                </address>
+            </div>
+
+            <hr>
+
+            <div class="copyright">
+                <small>
+                    ©TYelegards 2022
+                </small>
+
+                <figure class="telegads-logo">
+                    <span class="logo-part-1">TELEG</span>
+                    <span class="logo-part-2">ADS</span>
+                </figure>
+            </div>
+        </footer>
+    </main>
+</body>
+</html>

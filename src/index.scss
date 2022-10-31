@@ -1,0 +1,24 @@
+@use 'styles/normalize.css';
+@use 'styles/fonts-loader';
+@use 'styles/header';
+
+@use 'styles/sections/hero';
+@use 'styles/sections/clients';
+@use 'styles/sections/start-steps';
+@use 'styles/sections/services';
+@use 'styles/sections/registration';
+@use 'styles/sections/contact';
+
+@use 'styles/footer';
+
+@use 'styles/colors' as *;
+
+*::selection {
+    background-color: $mainColor;
+    color: white;
+}
+
+.adaptive-image {
+    width: 100%;
+    height: 100%;
+}
