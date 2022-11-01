@@ -478,6 +478,12 @@
     }
 }
 
+@media (max-width: 1000px) {
+    .header {
+        background-size: 100% auto;
+    }
+}
+
 @media (max-width: 1050px) {
     .navigation-sticky .log-in-button {
         display: none;
